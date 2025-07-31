@@ -1,0 +1,35 @@
+<div class="container-tech-race">
+  <div class="container-tech-race__header">
+    <h1 class="container-tech-race__title">Tech Race</h1>
+  </div>
+  <div class="container-tech-race__form-container">
+    <form [formGroup]="formStrategy" class="container-tech-race__form">
+      <div class="container-tech-race__form-g">
+        <div class="container-tech-race__field">
+          <mat-form-field>
+            <mat-label>Pilotos</mat-label>
+            <mat-select formControlName="driverId">
+              <mat-option *ngFor="let item of drivers;" [value]="item.Id">{{item.Name}}</mat-option>
+            </mat-select>
+            <mat-error *ngIf="this.formStrategy.get('driverId')?.invalid">*Campo inválido</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="container-tech-race__field">
+          <mat-form-field>
+            <mat-label>Total de vueltas</mat-label>
+            <input matInput type="text" class="form-control" formControlName="maxLaps">
+            <mat-error *ngIf="this.formStrategy.get('maxLaps')?.invalid">*Campo inválido</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="btn">
+          <div class="btn-primary" (click)="getStrategies()">Generar estrategia</div>
+        </div>
+      </div>
+
+    </form>
+  </div>
+  <div class="container-tech-race__grid">
+   <app-card [Strategy]="strategy"></app-card> 
+  </div>
+</div>
+<router-outlet></router-outlet>

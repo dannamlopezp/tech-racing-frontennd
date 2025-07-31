@@ -1,0 +1,94 @@
+.container-tech-race {
+    margin-bottom: 15px;
+
+    &__header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 20px;
+    }
+
+    &__form {
+        display: flex;
+
+        gap: 10px;
+        align-items: center;
+    }
+
+    &__form-g {
+        padding: 22px;
+        box-shadow: 2px 9px 17px -1px #4e4e557a;
+        border-radius: 18px;
+    }
+
+    &__title {
+        font-family: Bitcont Prop Double, sans-serif;
+        font-size: 64px;
+        font-weight: 400;
+    }
+
+    
+
+    &__form-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .container-tech-race {
+        &__form {
+            flex-direction: row;
+            justify-content: center;
+            gap: 0;
+        }
+
+        &__form-g {
+            display: flex;
+
+        }
+
+        &__field {
+            margin: 0 10px;
+        }
+
+       
+    }
+
+    .btn {
+        margin-right: 10px;
+    }
+
+
+
+}
+
+.btn-primary {
+    max-width: 218px;
+    min-width: 212px;
+    height: 46px;
+    background-color: #e10600;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #c00500;
+        font-weight: 700;
+        width: 222px;
+        height: 39px;
+
+    }
+}
+
+.btn {
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+}

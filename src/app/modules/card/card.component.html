@@ -1,0 +1,31 @@
+<div class="container-card__grid">
+    <div class="container-card " *ngFor="let item of Strategy; let i = index ">
+        <div class="container-card__header">
+            <h1 class="container-card__title">{{"Estrategia #" + (i + 1)}}</h1>
+        </div>
+        <div class="container-card__content">
+            <div class="container-card__content__item">
+                <mat-icon>sports_score</mat-icon>
+                <div class="container-card__content__item__value">Descripción : {{item.description}}</div>
+            </div>
+            <div class="container-card__content__item">
+                <mat-icon>flag_check</mat-icon>
+                <div class="container-card__content__item__value">Paradas: {{item.stops}}</div>
+            </div>
+            <div class="container-card__content__item">
+                <mat-icon>directions_car</mat-icon>
+                <div class="container-card__content__item__value">Total de vueltas: {{item.totalLaps}}</div>
+            </div>
+            <div class="container-card__content__item">
+                <mat-icon>local_gas_station</mat-icon>
+                <div class="container-card__content__item__value">Promedio de consumo: {{item.totalConsumption}}</div>
+            </div>
+            <div class="container-card__content__item">
+                <mat-icon>speed</mat-icon>
+                <div class="container-card__content__item__value">Promedio de rendimiento: {{item.averagePerformance}}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
